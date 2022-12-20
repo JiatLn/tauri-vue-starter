@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +16,10 @@ export default defineConfig({
         'src/composables',
         'src/stores',
       ],
+    }),
+    // https://github.com/antfu/unplugin-vue-components
+    Components({
+      dts: 'src/types/components.d.ts',
     }),
   ],
 
