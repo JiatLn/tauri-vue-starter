@@ -16,7 +16,7 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ['vue', '@vueuse/core'],
+      imports: ['vue', '@vueuse/core', 'vue-router'],
       resolvers: [],
       vueTemplate: true,
       dts: 'src/types/auto-imports.d.ts',

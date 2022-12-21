@@ -6,6 +6,7 @@ This template should help get you started developing with Vue 3 and TypeScript i
 ## Features
 
 - [x] ⚡️ Vite + Vue 3 + TypeScript
+- [x] 🗺️ [Vue Router](https://router.vuejs.org) - The official router for Vue.js.
 - [x] 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
 - [x] 🌲 [Components auto importing](./src/components)
 - [x] 📦 [VueUse](https://vueuse.org) - Collection of essential Vue Composition Utilities
