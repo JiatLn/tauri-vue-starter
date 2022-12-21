@@ -1,10 +1,18 @@
+import * as path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import Unocss from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@/': `${path.resolve(__dirname, 'src')}/`,
+      '~/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  },
   plugins: [
     vue(),
     AutoImport({
@@ -21,6 +29,7 @@ export default defineConfig({
     Components({
       dts: 'src/types/components.d.ts',
     }),
+    Unocss(),
   ],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
